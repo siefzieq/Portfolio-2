@@ -1,0 +1,60 @@
+/* Container for the scrolling images */
+.canvas-2-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.scrolling-images {
+    display: flex;              /* Use Flexbox to align images in a row */
+    white-space: nowrap;        /* Prevent wrapping */
+    animation: scroll 15s linear infinite; /* Apply the scrolling effect */
+}
+
+.image-set {
+    display: flex;
+}
+.skill-container {
+    position: relative;
+    display: inline-block;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.grayscale:hover {
+    filter: none;
+}
+
+.proficiency {
+    display: none;
+    position: absolute;
+    bottom: -30px; /* Adjust to control the distance below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 1;
+    padding: 10px 10px;
+}
+
+.skill-container:hover .proficiency {
+    display: block;
+}
+
+
+/* Animation to move images */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move images to the left */
+    }
+}

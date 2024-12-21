@@ -1,0 +1,56 @@
+/* Container styles */
+.project-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item {
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+/* Hover overlay */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* Button styles */
+.view-button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
